@@ -9,5 +9,13 @@
   "devDependencies": {
     "eslint": "^8.0.0",
     "jest": "^29.0.0"
-  }
+  },
+  "files": [
+    ".gitignore",
+    "README.md",
+    "src/index.js",
+    "tests/unit/hello.test.js",
+    "tests/integration/hello.integration.test.js",
+    "tests/e2e/hello.e2e.test.js"
+  ]
 }
