@@ -22,9 +22,8 @@ jobs:
         run: npx allure generate allure-results/
 
       - name: Upload Allure report
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-pages-artifact@v4
         with:
-          name: github-pages
           path: allure-report
 
   deploy:
