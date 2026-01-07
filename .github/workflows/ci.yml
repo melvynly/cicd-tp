@@ -39,21 +39,19 @@ jobs:
         run: npm ci
 
       - name: Execute test and generate report
-        run:  npx allure run -- npm test 
-      
-      - name: Run Allure Action
+        run:  npx allure run -- npm test  
+
+      - name: Post Allure summary (PR comment + checks)
         uses: allure-framework/allure-action@v0
         with:
           report-directory: "./allure-report"
           github-token: ${{ secrets.GITHUB_TOKEN }}
-
-        
+         
       - name: Upload Allure report as artifact
         uses: actions/upload-artifact@v4
         with:
           name: allure-report
           path: allure-report
-          #test  
 
 
         
