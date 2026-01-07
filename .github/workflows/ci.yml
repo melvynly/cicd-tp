@@ -38,7 +38,9 @@ jobs:
         run: npm ci
 
       - name: Execute test and generate report
-        run:  npx allure run -- npm run test  
+        run:  npx allure run -- npm run test 
+      - name : generate
+        run : npx allure generate allure-results --clean -o allure-report
 
       - name: Post Allure summary (PR comment + checks)
         uses: allure-framework/allure-action@v0
